@@ -32,6 +32,31 @@
     </div>
 </nav>
 
+<table class= "table">
+        <thead>
+            <tbody>
+                <?php
+                    $file = fopen("datafile.csv","r");
+                    while (($data = fgetcsv($file, 0, ",")) !== FALSE){
+                        echo "<tr>";
+                        echo "<td>".$data[0]."</td>";
+                        echo "<td>".$data[1]."</td>";
+                        echo "<tr>";
+                    }
+                    fclose($file);
+                ?>
+            </tbody>
+        </thead>
+    </table>
+    <?php
+        $file = fopen("datafile.csv","r");
+        $total =0;
+        while (($data = fgetcsv($file, 0, ",")) !== FALSE){
+            $total += intval($data[1]);
+        }
+        fclose($file);
+        echo "Total is :". $total;
+    ?>
 
 
 </body>

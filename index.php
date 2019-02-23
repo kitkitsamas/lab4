@@ -78,11 +78,13 @@ if(isset($_POST['submit'])){
                                     </div>
                                     <button type="submit" id="submit" name="submit" class="btn btn-success btn-lg float-right">Submit</button>
                                 </form>
-                                    <div class="form-group">
+                                <form method="post">
+                                <div class="form-group">
                                     <input type="file" name="file" id="file" class="input-large">
+                                    <button type="submit" id="import" name="import" class="btn btn-success btn-lg float-right">Import</button>
                                     </div>
-                                    <button type="submit" id="import" name="import" class="btn btn-success btn-lg float-right" data-loading-text="Loading...">Import</button>
                                 </form>
+                        
                             </div>
                         </div>
                     </div>
